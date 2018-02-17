@@ -3,7 +3,7 @@
     <persistence-unit name="customers-jpa" transaction-type="RESOURCE_LOCAL">
         <non-jta-data-source>jdbc/CustomersDS</non-jta-data-source>
 
-        <class>Customer</class>
+        <class>models.Customer</class>
 
         <properties>
             <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>

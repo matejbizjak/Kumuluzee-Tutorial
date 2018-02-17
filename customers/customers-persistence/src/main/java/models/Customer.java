@@ -1,3 +1,5 @@
+package models;
+
 import org.eclipse.persistence.annotations.UuidGenerator;
 
 import javax.persistence.*;
@@ -5,7 +7,7 @@ import java.util.Date;
 
 @Entity(name = "customer")
 @NamedQueries(value = {
-        @NamedQuery(name = "Customer.getAll", query = "SELECT c FROM customer c")
+        @NamedQuery(name = "Customer.getAll", query = "SELECT c FROM Customer c")
 })
 @UuidGenerator(name = "idGenerator")
 public class Customer {

@@ -1,3 +1,7 @@
+package beans;
+
+import models.Customer;
+
 import javax.enterprise.context.RequestScoped;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
@@ -17,8 +21,9 @@ public class CustomersBean {
     public Customer getCustomer(String customerId) {
         Customer customer = em.find(Customer.class, customerId);
 
-        if (customer == null)
+        if (customer == null) {
             throw new NotFoundException();
+        }
 
         return customer;
     }
@@ -38,8 +43,9 @@ public class CustomersBean {
     public Customer putCustomer(String customerId, Customer customer) {
         Customer c = em.find(Customer.class, customerId);
 
-        if (c == null)
+        if (c == null) {
             return null;
+        }
 
         try {
             beginTx();
