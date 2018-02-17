@@ -27,6 +27,7 @@
         <dependency>
             <groupId>si.matejbizjak.kumuluzee-tutorial</groupId>
             <artifactId>customers-business-logic</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
